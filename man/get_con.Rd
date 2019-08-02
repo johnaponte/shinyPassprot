@@ -4,10 +4,12 @@
 \alias{get_con}
 \title{Get a connection string}
 \usage{
-get_con(configname = "defaultdb")
+get_con(configname = "defaultdb", driver = odbc::odbc)
 }
 \arguments{
 \item{configname}{section of the \code{config.yml} file with the parameters}
+
+\item{driver}{the function that return an \code{DBI} driver}
 }
 \value{
 a \code{\link[pool]{dbPool}} connection object

@@ -1,0 +1,4 @@
+default:
+  defaultdb:
+     dbname: ":memory:"
+  salt: 123
