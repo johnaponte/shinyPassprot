@@ -10,7 +10,7 @@ Description: Write you shiny app as a module and wrap with this password protect
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Suggests: 
-    testthat,
-    spelling
-Language: en-US
+Suggests: testthat,spelling
+Imports: pool, DBI, odbc, config, openssl     
+Language: en-GB
+RoxygenNote: 6.1.1
