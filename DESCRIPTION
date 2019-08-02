@@ -1,0 +1,16 @@
+Package: shinyPassprot
+Title: Shiny applications password protected using modules
+Version: 0.1
+Authors@R: 
+    person(given = "John",
+           family = "Aponte",
+           role = c("aut", "cre"),
+           email = "john.j.aponte@gmail.com")
+Description: Write you shiny app as a module and wrap with this password protected shiny app.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    testthat,
+    spelling
+Language: en-US
