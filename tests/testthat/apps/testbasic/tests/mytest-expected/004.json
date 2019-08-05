@@ -1,0 +1,56 @@
+{
+  "input": {
+    "applogic-btn_sim": 1,
+    "applogic-num": 10,
+    "btn_login": 1,
+    "chgpassword-btn_pwd": 0,
+    "chgpassword-newpwd1": "",
+    "chgpassword-newpwd2": "",
+    "chgpassword-oldpwd": "",
+    "lnk_backapp": 0,
+    "lnk_exit": 0,
+    "lnk_pwd": 1,
+    "password": "guest",
+    "username": "guest"
+  },
+  "output": {
+    "applogic-plot1": {
+      "src": "[image data sha1: 7274d3bf39dd09e9d19fcab9c2f71a37b0619e1a]",
+      "width": 631,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": -0.64,
+              "right": 3.14,
+              "bottom": -0.12,
+              "top": 3.12
+            },
+            "range": {
+              "left": 59.04,
+              "right": 600.76,
+              "bottom": 325.56,
+              "top": 58.04
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
+
+            }
+          }
+        ],
+        "dims": {
+          "width": 631,
+          "height": 400
+        }
+      }
+    },
+    "chgpassword-prompt": "Change password for user: guest"
+  },
+  "export": {
+
+  }
+}

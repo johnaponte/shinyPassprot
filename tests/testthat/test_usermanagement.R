@@ -2,12 +2,13 @@
 # 20190802 by JJAV
 # # # # # # # # # # # # # # # # #
 library(DBI)
-
+library(pool)
 context("User management")
 
 test_that("get_con works" , {
   con <- get_con(driver = RSQLite::SQLite)
   expect_true(dbIsValid(con))
+  poolClose(con)
 })
 
 
@@ -30,4 +31,5 @@ test_that("functions to create user works", {
   expect_true(is_authorized(con, salt,"newuser","otherpass"))
   delete_user(con,"newuser")
   expect_false(exists_user(con,"newuser"))
+  poolClose(con)
 })

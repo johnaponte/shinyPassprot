@@ -1,6 +1,6 @@
 Package: shinyPassprot
 Title: Shiny applications password protected using modules
-Version: 0.2
+Version: 0.3
 Authors@R: 
     person(given = "John",
            family = "Aponte",
@@ -10,7 +10,12 @@ Description: Write you shiny app as a module and wrap with this password protect
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Suggests: testthat,spelling, odbc, RSQLite
+Suggests: 
+    testthat,
+    spelling,
+    odbc,
+    RSQLite,
+    shinytest
 Imports: pool, DBI, config, openssl, shiny, shinyjs, shinythemes, shinyBS     
 Language: en-GB
 RoxygenNote: 6.1.1

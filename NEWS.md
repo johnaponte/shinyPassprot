@@ -9,8 +9,14 @@ NEWS for the package shinyPassprot
 * Basic skeleton
 
 0.2
-==
+===
 
 * Add module to change the password
 
 * Add News.md
+
+
+0.3
+===
+
+* Add unit test for the app basic module

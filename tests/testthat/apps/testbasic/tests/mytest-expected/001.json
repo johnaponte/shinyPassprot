@@ -1,0 +1,22 @@
+{
+  "input": {
+    "applogic-btn_sim": 0,
+    "applogic-num": 0,
+    "btn_login": 0,
+    "chgpassword-btn_pwd": 0,
+    "chgpassword-newpwd1": "",
+    "chgpassword-newpwd2": "",
+    "chgpassword-oldpwd": "",
+    "lnk_backapp": 0,
+    "lnk_exit": 0,
+    "lnk_pwd": 0,
+    "password": "",
+    "username": ""
+  },
+  "output": {
+
+  },
+  "export": {
+
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "input": {
+    "applogic-btn_sim": 0,
+    "applogic-num": 0,
+    "btn_login": 1,
+    "chgpassword-btn_pwd": 0,
+    "chgpassword-newpwd1": "",
+    "chgpassword-newpwd2": "",
+    "chgpassword-oldpwd": "",
+    "lnk_backapp": 0,
+    "lnk_exit": 0,
+    "lnk_pwd": 0,
+    "password": "guest",
+    "username": "guest"
+  },
+  "output": {
+    "applogic-plot1": {
+      "src": "[image data sha1: 0e25b08c91c06b1b3dac5f40101c6b63209932d4]",
+      "width": 631,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "domain": {
+              "left": -0.04,
+              "right": 1.04,
+              "bottom": -0.04,
+              "top": 1.04
+            },
+            "range": {
+              "left": 0,
+              "right": 631,
+              "bottom": 399,
+              "top": -1
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "mapping": {
+
+            }
+          }
+        ],
+        "dims": {
+          "width": 631,
+          "height": 400
+        }
+      }
+    }
+  },
+  "export": {
+
+  }
+}
