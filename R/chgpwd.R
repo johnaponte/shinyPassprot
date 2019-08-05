@@ -11,7 +11,7 @@
 chgpwdUI <- function(id){
   ns <- NS(id)
   tagList(
-    h3("Change of password"),
+    h4(textOutput(ns("prompt"))),
     passwordInput(ns("oldpwd"),label = "Old Password"),
     passwordInput(ns("newpwd1"), label = 'New Password'),
     passwordInput(ns("newpwd2"), label = 'Confirm Password'),
@@ -21,21 +21,30 @@ chgpwdUI <- function(id){
 }
 
 
-#' Change passwod module, Server part
+#' Change password module, Server part
 #'
-#' @param input for the callmodule
-#' @param output for the callmodule
-#' @param session for the callmodule
+#' @param input for the \code{callmodule}
+#' @param output for the \code{callmodule}
+#' @param session for the \code{callmodule}
 #' @param con \code{\link[pool]{dbPool}} connection object
 #' @param salt a string to improve masking of passwords
 #' @param username the username
 #' @import shiny
 #' @importFrom shinyBS updateButton
+#' @importFrom shinyjs hideElement
 #' @export
 chgpwd <- function(input, output, session, con, salt, username) {
   ns <- session$ns
-  observe(
-    cat(username(),"\n"),
+
+  output$prompt <- renderText(paste("Change password for user:",username()))
+
+  observe({
+    cat("Username: ", username(),"\n")
+    cat(input$oldpwd,"\n")
+    cat(input$newpwd1,"\n")
+    cat(input$newpwd2,"\n")
+    cat(is_authorized(con,salt,trimws(username(),"both"), trimws(input$oldpwd,"both")), "\n")
+
     if (
      is_authorized(con,salt,trimws(username(),"both"), trimws(input$oldpwd,"both")) &
       trimws(input$newpwd1, "both") == trimws(input$newpwd2, "both") &
@@ -46,16 +55,18 @@ chgpwd <- function(input, output, session, con, salt, username) {
     else {
       updateButton(session, ns("btn_pwd"), disabled = T)
     }
+  }
   )
 
   observeEvent(
     input$btn_pwd,
     {
       modify_password(con, salt, trimws(username(),"both"), trimws(input$newpwd1, "both"))
+      hideElement("oldpwd")
+      hideElement("newpwd1")
+      hideElement("newpwd2")
+      hideElement("btn_pwd")
       output$msg <- renderText("Password changed with success")
-      updateTextInput(session, ns("oldpwd"),value = "")
-      updateTextInput(session, ns("newpwd1"),value = "")
-      updateTextInput(session, ns("newpwd2"),value = "")
     }
   )
 

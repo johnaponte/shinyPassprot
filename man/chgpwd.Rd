@@ -2,16 +2,16 @@
 % Please edit documentation in R/chgpwd.R
 \name{chgpwd}
 \alias{chgpwd}
-\title{Change passwod module, Server part}
+\title{Change password module, Server part}
 \usage{
 chgpwd(input, output, session, con, salt, username)
 }
 \arguments{
-\item{input}{for the callmodule}
+\item{input}{for the \code{callmodule}}
 
-\item{output}{for the callmodule}
+\item{output}{for the \code{callmodule}}
 
-\item{session}{for the callmodule}
+\item{session}{for the \code{callmodule}}
 
 \item{con}{\code{\link[pool]{dbPool}} connection object}
 
@@ -20,5 +20,5 @@ chgpwd(input, output, session, con, salt, username)
 \item{username}{the username}
 }
 \description{
-Change passwod module, Server part
+Change password module, Server part
 }

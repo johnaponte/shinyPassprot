@@ -28,13 +28,13 @@ passprotUI <-
       hidden(div(
         id = "app",
         fluidRow(column(12, appmoduleUI("applogic",...))),
-        fluidRow(column(1, actionLink("lnk_pwd","Change Password"))),
-        fluidRow(column(1, actionLink("lnk_exit","Exit")))
+        fluidRow(column(3, actionLink("lnk_pwd","Change Password"))),
+        fluidRow(column(3, actionLink("lnk_exit","Exit")))
       )),
       hidden(div(
         id = "chgpwd",
         fluidRow(column(12, chgpwdUI("chgpassword"))),
-        fluidRow(column(1, actionLink("lnk_backapp","Return to the application")))
+        fluidRow(column(3, actionLink("lnk_backapp","Return to the application")))
       )),
       div(
         id = "login",

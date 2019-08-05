@@ -23,8 +23,9 @@ passprotServer <-  function(con, salt, appmodule, ...) {
     #Here comes the logic of the app
     callModule(appmodule, "applogic", ...)
 
+
     #Here comes the logic of the change password
-    callModule(chgpwd, "chgpassword", con, salt, reactive(input$username) )
+    callModule(chgpwd, "chgpassword", con, salt, reactive({input$username}) )
 
     #Here comes the logic of the user management
     rv <- reactiveValues(attemps = 3)
