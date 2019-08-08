@@ -1,4 +1,6 @@
 default:
   defaultdb:
+     package: RSQLite
+     dbconnection: SQLite
      dbname: ":memory:"
   salt: 123

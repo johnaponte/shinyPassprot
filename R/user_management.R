@@ -1,29 +1,6 @@
 # Functions to help with user management and a database
 # 20190802 by JJAV
 # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-library(openssl)
-library(DBI)
-
-# get Database connection ####
-
-#' Get a connection string
-#'
-#' Read a \code{config.yml} file to obtain the
-#' connection parameter string to create a \code{\link[pool]{dbPool}}
-#' connection object
-#' @param configname section of the \code{config.yml} file with the parameters
-#' @param driver the function that return an \code{DBI} driver
-#' @return a \code{\link[pool]{dbPool}} connection object
-#' @importFrom config get
-#' @importFrom pool dbPool
-#' @export
-get_con <- function(configname = "defaultdb",
-                    driver = odbc::odbc) {
-  dw <- config::get(configname)
-  drv <- driver()
-  theargs <- c(list(drv = drv), dw)
-  return(do.call(dbPool, theargs))
-}
 
 
 #' Creates the user table

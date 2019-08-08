@@ -13,9 +13,17 @@ LazyData: true
 Suggests: 
     testthat,
     spelling,
-    odbc,
     RSQLite,
     shinytest
-Imports: pool, DBI, config, openssl, shiny, shinyjs, shinythemes, shinyBS     
+Imports: 
+    pool,
+    DBI,
+    config,
+    openssl,
+    shiny,
+    shinyjs,
+    shinythemes,
+    shinyBS,
+    repana
 Language: en-GB
 RoxygenNote: 6.1.1

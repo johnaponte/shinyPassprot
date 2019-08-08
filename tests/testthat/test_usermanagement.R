@@ -1,19 +1,12 @@
 # This test the user management
 # 20190802 by JJAV
 # # # # # # # # # # # # # # # # #
-library(DBI)
-library(pool)
+library(repana)
 context("User management")
-
-test_that("get_con works" , {
-  con <- get_con(driver = RSQLite::SQLite)
-  expect_true(dbIsValid(con))
-  poolClose(con)
-})
 
 
 test_that("functions to create user works", {
-  con <- get_con(driver = RSQLite::SQLite)
+  con <- get_con()
   salt <-  config::get("salt")
   create_users_table(con,salt)
   expect_true(exists_user(con,"admin"))

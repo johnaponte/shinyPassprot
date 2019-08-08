@@ -7,10 +7,11 @@ library(shinyBS)
 library(shinyjs)
 library(shinythemes)
 library(shinyPassprot)
+library(repana)
 
 
 # Setup database ####
-con <- get_con(driver = RSQLite::SQLite)
+con <- get_pool()
 salt <- config::get("salt")
 if (!dbExistsTable(con, "users")) {
   create_users_table(con, salt)
