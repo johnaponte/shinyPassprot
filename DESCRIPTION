@@ -1,6 +1,6 @@
 Package: shinyPassprot
 Title: Shiny applications password protected using modules
-Version: 0.3
+Version: 0.4
 Authors@R: 
     person(given = "John",
            family = "Aponte",

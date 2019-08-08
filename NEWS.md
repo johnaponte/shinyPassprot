@@ -1,3 +1,5 @@
+# shinyPassprot 0.4
+
 NEWS for the package shinyPassprot
 ==================================
 
